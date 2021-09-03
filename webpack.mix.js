@@ -16,10 +16,10 @@ mix.js('resources/js/app.js', 'public/js')
         require('postcss-import'),
         require('tailwindcss'),
     ]);
-    
+
 mix.copy("resources/imagenes", "public/imagenes")
 
-mix.browserSync("telecompardo.test")
+mix.browserSync("localhost:8000")
 
 if (mix.inProduction()) {
     mix.version();
