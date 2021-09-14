@@ -2,6 +2,13 @@
   <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between">
     <div class="relative flex items-center h-16">
 
+
+      <style>
+        .active{
+          color:blue;
+          font-weight: bold;
+        }
+      </style>
       <!-- Mobile menu button-->
       <div class="absolute inset-y-0  flex items-center sm:hidden">
 
@@ -36,23 +43,26 @@
     </div>
     <div class="flex sm:flex-1 items-center sm:items-stretch sm:justify-start">
       {{-- Logotipos --}}
-      <a href="/" class="flex-shrink-0 flex items-center text-left">
-        <img class="block lg:hidden h-8 w-auto" src="{{ asset('imagenes/Logo.png') }}" alt="Telecompardo">
-        <img class="hidden lg:block h-8 w-auto" src="{{ asset('imagenes/Logo.png') }}" alt="Telecompardo">
+      <div class="flex items-center space-x-2">
+      <a href="/inicio" class="flex-shrink-0 flex items-center text-left">
+        <img class="block lg:hidden h-16 w-auto" src="{{ asset('imagenes/Logo.png') }}" alt="Telecompardo">
+        <img class="hidden lg:block h-16 w-auto" src="{{ asset('imagenes/Logo.png') }}" alt="Telecompardo">
       </a>
-
+      <span class="text-4xl font-semibold text-gray-900 font-monospace">Telecompardo</span>
+      </div>
       {{-- Menu lg --}}
-      <div class="hidden sm:block sm:ml-6 flex justify-end w-full items-center">
+      <div class="hidden sm:block sm:ml-6 justify-end w-full items-center">
         <div class="flex space-x-4 justify-end items-center mt-4">
           <a href="/inicio"
-            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            aria-current="page">Inicio</a>
-          <a href="/nosotros"
-            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-bold {{request()->routeIs("inicio") ? "active" : ""}}" aria-current="page">Inicio</a>
+          {{-- <a href="/nosotros"
+            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium {{request()->routeIs("nosotros") ? "active" : ""}}">Nosotros</a> --}}
           <a href="/contactanos"
-            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contactanos</a>
+            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-bold {{request()->routeIs("contactanos") ? "active" : ""}}">Contactanos</a>
           <a href="/normativas"
-            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Normativas</a>
+            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-bold {{request()->routeIs("normativas") ? "active" : ""}}">Normativas</a>
+            <a target="_blank" href="http://190.110.98.75/cliente/login"
+            class="text-gray-900 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-bold">Acceso CLientes</a>
         </div>
       </div>
     </div>

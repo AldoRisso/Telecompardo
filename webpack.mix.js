@@ -18,8 +18,9 @@ mix.js('resources/js/app.js', 'public/js')
     ]);
 
 mix.copy("resources/imagenes", "public/imagenes")
+mix.copy("resources/archivos", "public/archivos")
 
-mix.browserSync("localhost:8000")
+mix.browserSync("telecompardo.test")
 
 if (mix.inProduction()) {
     mix.version();

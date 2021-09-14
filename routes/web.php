@@ -1,6 +1,15 @@
 <?php
 
+use App\Http\Controllers\ContactanosController;
+use App\Http\Controllers\ContrataloController;
+use App\Http\Controllers\CursoController;
 use Illuminate\Support\Facades\Route;
+use Faker\Guesser\Name;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\NormativasController;
+use App\Http\Controllers\NosotrosController;
+use App\Http\Controllers\PruebasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,29 +22,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', HomeController::class); 
 
-Route::get('/inicio', function () {
-    return view('inicio');
-});
+Route::get('/inicio', IndexController::class)->name("inicio");
 
-Route::get('/nosotros', function () {
-    return view('nosotros');
-});
+Route::get('/nosotros', NosotrosController::class)->name("nosotros");
 
-Route::get('/contactanos', function () {
-    return view('contactanos');
-});
+Route::get('/contactanos', ContactanosController::class)->name("contactanos");
 
-Route::get('/normativas', function () {
-    return view('normativas');
-});
+Route::get('/normativas', NormativasController::class)->name("normativas");
 
-Route::get('/pruebas', function () {
-    return view('pruebas');
-});
+Route::get('/pruebas', PruebasController::class)->name("pruebas");
+
+Route::get('/contratalo', ContrataloController::class)->name("contratalo");
+
+Route::post('contactanos', [ContactanosController::class, "store"])->name("contactanos.store");
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

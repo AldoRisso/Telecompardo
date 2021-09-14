@@ -10,9 +10,20 @@ module.exports = {
     ],
 
     theme: {
+
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                allison: ["Allison"],
+                anton: ["Anton"],
+                staatliches: ["Staatliches"],
+                'alfa-slab-one': ['"Alfa Slab One"'],
+                'archivo-black': ['"Archivo Black"'],
+                'passion-one': ['"Passion One"'],
+                'dm-serif-display': ['"DM Serif Display"'],
+                'Carter-one': ['"Carter One"'],
+                'bungee': ['Bungee'],
+
             },
         },
     },

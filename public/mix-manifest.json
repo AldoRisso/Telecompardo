@@ -2,5 +2,10 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/imagenes/Logo.png": "/imagenes/Logo.png",
-    "/imagenes/universe.jpg": "/imagenes/universe.jpg"
+    "/imagenes/universe.jpg": "/imagenes/universe.jpg",
+    "/archivos/Decreto-18_13-FEB-2014.pdf": "/archivos/Decreto-18_13-FEB-2014.pdf",
+    "/archivos/Decreto-194_16-FEB-2013.pdf": "/archivos/Decreto-194_16-FEB-2013.pdf",
+    "/archivos/Decreto-368_18-MAR-2011.pdf": "/archivos/Decreto-368_18-MAR-2011.pdf",
+    "/archivos/Derechos-de-los-Usuarios.pdf": "/archivos/Derechos-de-los-Usuarios.pdf",
+    "/archivos/DynamicPDF.pdf": "/archivos/DynamicPDF.pdf"
 }
